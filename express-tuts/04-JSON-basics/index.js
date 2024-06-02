@@ -3,7 +3,6 @@ const app = express();
 const { products } = require("./data");
 
 app.get("", (req, res) => {
-  // mengirimkan response yang nanti datanya bisa digunakan
   res.json(products);
 });
 
