@@ -7,10 +7,11 @@ const app = express();
 // setup static and middleware
 app.use(express.static("./public"));
 
-app.get("/", (req, res) => {
-  // ketika user mengakses home page, kita mengirim file index html
-  res.sendFile(path.resolve(__dirname, "./navbar-app/index.html"));
-});
+// adding html to static assets, and index.html will be the root page
+// app.get("/", (req, res) => {
+//   ketika user mengakses home page, kita mengirim file index html
+//   res.sendFile(path.resolve(__dirname, "./navbar-app/index.html"));
+// });
 
 app.all("*", (req, res) => {
   res.status(404).send("No Route Matching");
