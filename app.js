@@ -37,6 +37,13 @@ app.get("/api/products/:productID", (req, res) => {
   return res.send(singleProduct);
 });
 
+// Params - extra info
+// sometimes query is compleks
+app.get("/api/products/:productID/reviews/:reviewID", (req, res) => {
+  console.log(req.params);
+  res.send("hello world");
+});
+
 app.listen(5000, () => {
   console.log("This server is listening to port 5000...");
 });
