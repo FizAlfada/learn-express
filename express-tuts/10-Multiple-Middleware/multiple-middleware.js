@@ -23,6 +23,7 @@ app.get("/about", (req, res) => {
 });
 
 app.get("/contact", (req, res) => {
+  // req.user telah dibikin di file authorize.js
   console.log(req.user);
   res.send("Contact");
 });
